@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.swpu.customerprovider.dao.CustomerDao">
+
+    <insert id="addCustomer">
+        INSERT INTO customer (customer_name, customer_address, customer_ticket)
+        VALUES (#{customerName}, #{customerAddress}, #{customerTicket})
+    </insert>
+
+    <update id="updateCustomer">
+        UPDATE customer
+        SET customer_name    = #{customerName},
+            customer_address = #{customerAddress},
+            customer_ticket  = #{customerTicket}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delCustomer">
+        DELETE FROM customer WHERE id in
+        <foreach collection="ids" item="customerId" open="(" separator="," close=")">
+            #{customerId}
+        </foreach>
+
+    </delete>
+
+    <delete id="delCustomerById">
+        DELETE
+        FROM customer
+        WHERE id = #{id}
+    </delete>
+
+    <!--通过Id查询-->
+    <select id="getCustomerById" resultType="Customer">
+        SELECT *
+        FROM customer
+        WHERE id = #{id}
+    </select>
+
+    <!--开启转驼峰-->
+    <!--查询所有-->
+    <select id="getCustomerList" resultType="Customer">
+        SELECT *
+        FROM customer
+    </select>
+
+
+    <!--使用resultMap-->
+    <!--    <resultMap id="customerMap" type="com.swpu.springboot1.entity.Customer">-->
+    <!--        <id property="Id" column="id"></id>-->
+    <!--        <result property="customerName" column="customer_name"></result>-->
+    <!--        <result property="customerAddress" column="customer_address"></result>-->
+    <!--        <result property="customerTicket" column="customer_ticket"></result>-->
+    <!--    </resultMap>-->
+
+    <!--    <select id="getCustomerList" resultMap="customerMap">-->
+    <!--        SELECT * FROM customer-->
+    <!--    </select>-->
+</mapper>

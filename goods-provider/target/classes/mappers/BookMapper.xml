@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.swpu.goodsprovider.dao.GoodsDao">
+    <insert id="add">
+        INSERT INTO book (book_name, book_author, book_desc)
+        VALUES (#{bookName}, #{bookAuthor}, #{bookDesc})
+    </insert>
+
+    <select id="getBookList" resultType="com.swpu.goodscommons.pojo.Book">
+        SELECT *
+        FROM book
+    </select>
+
+    <select id="getDetail" resultType="com.swpu.goodscommons.pojo.Book">
+        SELECT *
+        FROM book
+        WHERE book_id = #{bookId}
+    </select>
+</mapper>

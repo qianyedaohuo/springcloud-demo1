@@ -1,0 +1,15 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    # 是否注册到eureka
+    register-with-eureka: false
+    # 是否发现其他服务
+    fetch-registry: false
+    # 设置注册地址  http://ip:port/eureka
+    service-url:
+      defaulzone: http://localhost:8761/eureka

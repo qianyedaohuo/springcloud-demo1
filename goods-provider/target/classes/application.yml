@@ -1,0 +1,24 @@
+server:
+  port: 8001
+
+# 指定当前服务注册的'服务发现注册中心'
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: goods-provider
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/day1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai}
+      username: ${SPRING_DATASOURCE_USERNAME:root}
+      password: ${SPRING_DATASOURCE_PASSWORD:123456}
+
+mybatis:
+    #config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+    mapper-locations: classpath:mappers/*.xml      # mapper映射文件
+    configuration:
+      map-underscore-to-camel-case: true

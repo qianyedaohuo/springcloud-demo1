@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/customer-provider/customer-provider.iml" filepath="$PROJECT_DIR$/customer-provider/customer-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customer-ui/customer-ui.iml" filepath="$PROJECT_DIR$/customer-ui/customer-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goods-commons/goods-commons.iml" filepath="$PROJECT_DIR$/goods-commons/goods-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goods-provider/goods-provider.iml" filepath="$PROJECT_DIR$/goods-provider/goods-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goods-ui/goods-ui.iml" filepath="$PROJECT_DIR$/goods-ui/goods-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix-dash/hystrix-dash.iml" filepath="$PROJECT_DIR$/hystrix-dash/hystrix-dash.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-demo1.iml" filepath="$PROJECT_DIR$/springcloud-demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
+    </modules>
+  </component>
+</project>

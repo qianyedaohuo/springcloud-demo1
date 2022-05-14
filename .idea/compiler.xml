@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="goods-commons" />
+        <module name="eureka" />
+        <module name="springcloud-demo1" />
+        <module name="hystrix-dash" />
+        <module name="goods-ui" />
+        <module name="goods-provider" />
+        <module name="customer-provider" />
+        <module name="zuul" />
+        <module name="customer-ui" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="customer-provider" target="1.8" />
+      <module name="customer-ui" target="1.8" />
+      <module name="eureka" target="1.8" />
+      <module name="goods-commons" target="1.8" />
+      <module name="goods-provider" target="1.8" />
+      <module name="goods-ui" target="1.8" />
+      <module name="hystrix-dash" target="1.8" />
+      <module name="hystrix-dashbord" target="1.8" />
+      <module name="springcloud-demo1" target="1.8" />
+      <module name="zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="customer-provider" options="-parameters" />
+      <module name="customer-ui" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="goods-commons" options="-parameters" />
+      <module name="goods-provider" options="-parameters" />
+      <module name="goods-ui" options="-parameters" />
+      <module name="hystrix-dashbord" options="-parameters" />
+      <module name="springcloud-demo1" options="-parameters" />
+    </option>
+  </component>
+</project>
